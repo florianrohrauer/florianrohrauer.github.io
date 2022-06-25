@@ -2,47 +2,73 @@ import React, { useState } from "react";
 import { Menu } from "iconoir-react";
 import FadeTransition from "./FadeTransition";
 import classNames from "classnames";
+import Hoverable from "./Hoverable";
 
 function NavBar() {
   const [open, setOpen] = useState<boolean>(false);
 
+  const navigate = (to: string) => {
+    return () => {
+      setOpen(false);
+      window.location.href = to;
+    };
+  };
+
   return (
-    <div className={"w-screen absolute z-10"}>
+    <div className={"w-screen fixed z-10"}>
       <div
         className={classNames(
-          "w-full max-w-6xl md:h-32 xl:px-0 m-auto flex px-4 h-16 justify-between",
+          "w-full max-w-6xl md:h-32 m-auto flex px-6 md:px-12 h-16 justify-between",
           "items-center bg-gradient-to-b from-background to-transparent",
           { "bg-background": open }
         )}
       >
         <a
-          href={"/"}
-          className={"logo font-[800] text-3xl tracking-widest cursor-pointer"}
+          href={"#home"}
+          className={"cursor-none logo font-[800] text-3xl tracking-widest"}
         >
-          <code>
-            _FR
-            <span
-              id={"logo-arrow"}
-              className={"inline-block transition ease-in-out duration-200"}
-            >
-              &gt;
-            </span>
-          </code>
+          <Hoverable>
+            <code>
+              _FR
+              <span
+                id={"logo-arrow"}
+                className={"inline-block transition ease-in-out duration-200"}
+              >
+                &gt;
+              </span>
+            </code>
+          </Hoverable>
         </a>
 
         <div className={"space-x-6 hidden md:flex"}>
-          <code className={"font-bold text-lg"}>
-            <a className={"html-tag closing"}>Home</a>
-          </code>
-          <code className={"font-bold text-lg"}>
-            <a className={"html-tag closing"}>Portfolio</a>
-          </code>
-          <code className={"font-bold text-lg"}>
-            <a className={"html-tag closing"}>AboutMe</a>
-          </code>
-          <code className={"font-bold text-lg"}>
-            <a className={"html-tag closing"}>Contact</a>
-          </code>
+          <Hoverable>
+            <code className={"font-bold text-lg transition hover:scale-110"}>
+              <a href={"#home"} className={"html-tag closing"}>
+                Home
+              </a>
+            </code>
+          </Hoverable>
+          <Hoverable>
+            <code className={"font-bold text-lg transition hover:scale-110"}>
+              <a href={"#portfolio"} className={"html-tag closing"}>
+                Portfolio
+              </a>
+            </code>
+          </Hoverable>
+          <Hoverable>
+            <code className={"font-bold text-lg transition hover:scale-110"}>
+              <a href={"#languages"} className={"html-tag closing"}>
+                Languages
+              </a>
+            </code>
+          </Hoverable>
+          <Hoverable>
+            <code className={"font-bold text-lg transition hover:scale-110"}>
+              <a href={"#contact"} className={"html-tag closing"}>
+                Contact
+              </a>
+            </code>
+          </Hoverable>
         </div>
 
         <div onClick={() => setOpen(!open)} className={"md:hidden"}>
@@ -58,16 +84,24 @@ function NavBar() {
           )}
         >
           <code className={"font-bold text-3xl"}>
-            <a className={"html-tag closing"}>Home</a>
+            <a className={"html-tag closing"} onClick={navigate("#home")}>
+              Home
+            </a>
           </code>
           <code className={"font-bold text-3xl"}>
-            <a className={"html-tag closing"}>Portfolio</a>
+            <a className={"html-tag closing"} onClick={navigate("#portfolio")}>
+              Portfolio
+            </a>
           </code>
           <code className={"font-bold text-3xl"}>
-            <a className={"html-tag closing"}>AboutMe</a>
+            <a className={"html-tag closing"} onClick={navigate("#languages")}>
+              Languages
+            </a>
           </code>
           <code className={"font-bold text-3xl"}>
-            <a className={"html-tag closing"}>Contact</a>
+            <a className={"html-tag closing"} onClick={navigate("#contact")}>
+              Contact
+            </a>
           </code>
         </div>
       </FadeTransition>

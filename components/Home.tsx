@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import HomeBackground from "./HomeBackground";
 import Stagger from "./Stagger";
+import Hoverable from "./Hoverable";
 
 function Home() {
   return (
-    <Fragment>
+    <div id={"home"}>
       <div className={"relative max-w-6xl w-full m-auto min-h-screen z-11"}>
-        <main className={"py-24 md:py-44 space-y-8 mx-4 xl:mx-0"}>
+        <main className={"py-24 md:py-44 space-y-8 px-6 md:px-12"}>
           <Stagger>
             <code className={"text-xl font-bold"}>
               <span className={"html-tag"}>h1</span>
@@ -22,7 +23,7 @@ function Home() {
               />
               <img
                 src={"Home Foreground Images/Web-Developer.svg"}
-                className={"h-22 max-w-[90%]"}
+                className={"h-22"}
                 alt={"Web Developer"}
               />
             </div>
@@ -37,24 +38,28 @@ function Home() {
 
         <div
           className={
-            "w-full max-w-6xl m-auto flex justify-between opacity-60 px-4"
+            "w-full max-w-6xl m-auto flex justify-between opacity-60 px-6 md:px-12"
           }
         >
-          <code
-            className={
-              "link cursor-pointer absolute right-4 email invisible lg:visible"
-            }
-          >
-            flo.rohrauer@gmail.com
-          </code>
+          <Hoverable className={"absolute right-12"}>
+            <code className={"link email invisible lg:visible"}>
+              <a href={"mailto:flo.rohrauer@gmail.com"}>
+                flo.rohrauer@gmail.com
+              </a>
+            </code>
+          </Hoverable>
 
-          <code
+          <Hoverable
             className={
-              "scroll-down flex items-center absolute left-1/2 -translate-x-1/2 translate-y-6 h-20"
+              "absolute left-1/2 -translate-x-1/2 translate-y-6 hover:scale-110 transition"
             }
           >
-            Scroll Down
-          </code>
+            <a href={"#portfolio"}>
+              <code className={"scroll-down flex items-center h-20"}>
+                Scroll Down
+              </code>
+            </a>
+          </Hoverable>
 
           <div
             className={
@@ -75,7 +80,7 @@ function Home() {
       </div>
 
       <HomeBackground />
-    </Fragment>
+    </div>
   );
 }
 
