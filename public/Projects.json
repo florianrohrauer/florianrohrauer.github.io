@@ -1,0 +1,18 @@
+[
+  {
+    "name": "My Zone",
+    "description": "My Zone was a Project developed during my final year at college in Traun. We created custom NFC Cards which stored contact information like Social Media Links or Websites. The user can read and write his personal card and share it with others via NFC."
+  },
+  {
+    "name": "Velo",
+    "description": "Velo was a school project in 4th grade at the higher technical college in Traun. This cross platform mobile app developed with Ionic was used to track the users location while he was travelling with a bike. At the end of his run the app calculates the driven distance, the CO2 emissions compared to the emissions of a car."
+  },
+  {
+    "name": "Unchef",
+    "description": "Unchef Recipes is my personal Cross Platform App developed with React Native. It started early 2020 with my brother, who is developing the backend of the platform. It is still under development and a it should be available for the public later this year (2022). Unchef is a collection of recipes managed by the Community. There are a lot of features coming to Unchef. You can learn more about existing features at https://unchef.app"
+  },
+  {
+    "name": "Metria Robots",
+    "description": "Metria was an Android App developed for a robotic arm, which was my final year thesis. This Hybrid Ionic App connects to the Robot Arm via Bluetooth and the user can control each joint of the arm with an intuitive user interface. The project was marked with an A and the app is fully compatible with the self-printed arm."
+  }
+]

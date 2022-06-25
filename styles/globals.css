@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Krona+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -11,6 +18,95 @@ a {
   text-decoration: none;
 }
 
+code {
+  font-family: "JetBrains Mono", Roboto, -apple-system, sans-serif;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.email {
+  transform-origin: center right;
+  transform: rotate(90deg) translateX(-2rem);
+  letter-spacing: 0.125rem;
+}
+
+.scroll-down {
+  background: linear-gradient(to bottom, transparent, #1a1a1a, transparent);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white;
+  }
+
+  code {
+    @apply block;
+  }
+
+  code > p {
+    @apply ml-8
+  }
+}
+
+.logo:hover #logo-arrow {
+  transform: translateX(.5rem);
+}
+
+@layer components {
+  .dropdown-nav {
+    height: calc(100vh - 4rem);
+  }
+
+  .html-tag {
+    @apply text-cyan-700;
+  }
+
+  .html-tag:before {
+    content: "<";
+    @apply text-subtext;
+  }
+
+  .html-tag:after {
+    content: ">";
+    @apply text-subtext;
+  }
+
+  .html-tag.closing:before {
+    content: "</";
+    @apply text-subtext;
+  }
+
+  .project-item {
+    @apply opacity-30 cursor-pointer transition-opacity
+  }
+}
+
+@keyframes stagger {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.stagger-child {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: stagger;
+  animation-delay: calc(var(--stagger-order) * 100ms);
+  animation-duration: 700ms;
+  animation-timing-function: ease-out;
+}
+
+.abc {
+  grid-template-columns: 1fr minmax(auto, 72rem) 1fr;
 }
