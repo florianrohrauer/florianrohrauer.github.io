@@ -22,7 +22,11 @@ function Footer() {
 
         <div className={"flex justify-center space-x-4"}>
           <Hoverable>
-            <a href={"https://github.com/florianrohrauer"} target={"_blank"}>
+            <a
+              href={"https://github.com/florianrohrauer"}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
               <div
                 className={
                   "hover:scale-110 transition grid place-items-center bg-neutral-700 w-16 h-16 rounded-full"
@@ -34,7 +38,11 @@ function Footer() {
           </Hoverable>
 
           <Hoverable>
-            <a href={"https://github.com/florianrohrauer"} target={"_blank"}>
+            <a
+              href={"https://github.com/florianrohrauer"}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
               <div
                 className={
                   "hover:scale-110 transition grid place-items-center bg-neutral-700 w-16 h-16 rounded-full"
@@ -46,7 +54,7 @@ function Footer() {
           </Hoverable>
 
           <Hoverable>
-            <a href={"https://unchef.app"} target={"_blank"}>
+            <a href={"https://unchef.app"} target={"_blank"} rel={"noreferrer"}>
               <div
                 className={
                   "hover:scale-110 transition grid place-items-center bg-neutral-700 w-16 h-16 rounded-full"
