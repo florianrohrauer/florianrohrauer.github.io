@@ -16,7 +16,7 @@ function Footer() {
       >
         <Hoverable>
           <a className={"link"} href={"mailto:flo.rohrauer@gmail.com"}>
-            <code className={"text-cyan-400"}>flo.rohrauer@gmail.com</code>
+            <code className={"text-rose-400"}>flo.rohrauer@gmail.com</code>
           </a>
         </Hoverable>
 

@@ -65,7 +65,7 @@ code {
   }
 
   .html-tag {
-    @apply text-cyan-700;
+    @apply text-rose-700;
   }
 
   .html-tag:before {
