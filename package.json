@@ -10,11 +10,10 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.5",
-    "@next/swc-darwin-x64": "^12.1.6",
     "aos": "^3.0.0-beta.6",
     "classnames": "^2.3.1",
     "framer-motion": "^6.3.13",
-    "iconoir-react": "^5.0.0",
+    "iconoir-react": "^7.7.0",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",

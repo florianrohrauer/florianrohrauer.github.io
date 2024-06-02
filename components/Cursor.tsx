@@ -1,10 +1,9 @@
-import React, { createContext, useEffect, useRef, useState } from "react";
+import React, {createContext, useEffect, useRef, useState} from "react";
 
 export const CursorContext = createContext({
   isHovered: false,
   setHovered: (_: boolean) => console.error("No Context!"),
-  onMouseDown: () => console.error("No Context!"),
-  onMouseUp: () => console.error("No Context!"),
+  onMouseDown: () => console.error("No Context!")
 });
 
 function Cursor({ children }) {
@@ -22,14 +21,9 @@ function Cursor({ children }) {
     cursor.current?.addEventListener("animationend", onAnimationEnd);
   };
 
-  const onMouseUp = () => {};
-
   useEffect(() => {
     const onMouseMove = (e) => {
       if (cursor.current && cursorInner.current) {
-        let style = `top:${e.clientY - 16}px;left:${e.clientX - 16}px;`;
-        let styleInner = `top:${e.clientY - 2}px;left:${e.clientX - 2}px;`;
-
         const { classList } = cursor.current;
         const isCurrentlyHovered = classList.contains("hovered");
 
@@ -39,8 +33,20 @@ function Cursor({ children }) {
           classList.remove("hovered");
         }
 
-        cursor.current.setAttribute("style", style);
-        cursorInner.current.setAttribute("style", styleInner);
+        const scale = isCurrentlyHovered ? 2 : 1;
+
+        const outerCursorStyle = `
+          transform: translate(${e.clientX - 16}px, ${e.clientY - 16}px) 
+          scale(${scale})
+        `
+
+        const innerCursorStyle = `transform: 
+          translate(${e.clientX - 2}px, ${e.clientY - 2}px) 
+          scale(${scale})
+        `
+
+        cursor.current.setAttribute("style", outerCursorStyle);
+        cursorInner.current.setAttribute("style", innerCursorStyle);
       }
     };
 
@@ -52,9 +58,7 @@ function Cursor({ children }) {
   }, [isHovered]);
 
   return (
-    <CursorContext.Provider
-      value={{ isHovered, setHovered, onMouseDown, onMouseUp }}
-    >
+    <CursorContext.Provider value={{ isHovered, setHovered, onMouseDown }}>
       <div className={"xl:cursor-none"}>
         <div
           className={

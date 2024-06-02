@@ -1,16 +1,16 @@
 import React from "react";
-import { Parallax } from "react-scroll-parallax";
+import {Parallax} from "react-scroll-parallax";
 import Hoverable from "./Hoverable";
 
 function Languages() {
   return (
     <div
       id={"languages"}
-      className={"relative py-32 w-full overflow-x-hidden min-h-screen"}
+      className={"relative py-32 overflow-x-hidden min-h-screen"}
     >
       <main
         className={
-          "mx-4 xl:mx-auto max-w-6xl w-full z-1 text-center space-y-12"
+          "mx-4 xl:mx-auto max-w-6xl z-1 text-center space-y-12"
         }
       >
         <div className={"w-full max-w-6xl md:m-auto mx-4 text-xl"}>

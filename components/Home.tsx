@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import HomeBackground from "./HomeBackground";
 import Stagger from "./Stagger";
 import Hoverable from "./Hoverable";
@@ -30,7 +30,7 @@ function Home() {
 
             <code className={"text-xl font-bold"}>
               <span className={"html-tag"}>body</span>
-              <p>Frontend Developer / App Developer</p>
+              <p>Fullstack Developer / App Developer</p>
               <span className={"html-tag closing"}>body</span>
             </code>
           </Stagger>

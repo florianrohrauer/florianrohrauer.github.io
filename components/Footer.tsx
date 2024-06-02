@@ -1,7 +1,7 @@
 import React from "react";
 import Hoverable from "./Hoverable";
-import { GitHub, Language, LinkedIn, Twitter } from "iconoir-react";
-import Languages from "./Languages";
+import {Github, Language, Linkedin} from "iconoir-react";
+import {IconButton} from "./IconButton";
 
 function Footer() {
   return (
@@ -21,49 +21,17 @@ function Footer() {
         </Hoverable>
 
         <div className={"flex justify-center space-x-4"}>
-          <Hoverable>
-            <a
-              href={"https://github.com/florianrohrauer"}
-              target={"_blank"}
-              rel={"noreferrer"}
-            >
-              <div
-                className={
-                  "hover:scale-110 transition grid place-items-center bg-neutral-700 w-16 h-16 rounded-full"
-                }
-              >
-                <GitHub height={24} width={24} />
-              </div>
-            </a>
-          </Hoverable>
+          <IconButton link={"https://github.com/florianrohrauer"}>
+            <Github height={24} width={24} />
+          </IconButton>
 
-          <Hoverable>
-            <a
-              href={"https://github.com/florianrohrauer"}
-              target={"_blank"}
-              rel={"noreferrer"}
-            >
-              <div
-                className={
-                  "hover:scale-110 transition grid place-items-center bg-neutral-700 w-16 h-16 rounded-full"
-                }
-              >
-                <LinkedIn height={24} width={24} />
-              </div>
-            </a>
-          </Hoverable>
+          <IconButton link={"https://www.linkedin.com/in/florian-rohrauer-913726243"}>
+            <Linkedin height={24} width={24} />
+          </IconButton>
 
-          <Hoverable>
-            <a href={"https://unchef.app"} target={"_blank"} rel={"noreferrer"}>
-              <div
-                className={
-                  "hover:scale-110 transition grid place-items-center bg-neutral-700 w-16 h-16 rounded-full"
-                }
-              >
-                <Language height={24} width={24} />
-              </div>
-            </a>
-          </Hoverable>
+          <IconButton link={"https://www.unchef.app"}>
+            <Language height={24} width={24} />
+          </IconButton>
         </div>
 
         <h5 className={"font-krona text-sm"}>
