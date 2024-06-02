@@ -9,10 +9,17 @@
   },
   {
     "name": "Unchef",
-    "description": "Unchef Recipes is my personal Cross Platform App developed with React Native. It started early 2020 with my brother, who is developing the backend of the platform. It is still under development and a it should be available for the public later this year (2022). Unchef is a collection of recipes managed by the Community. You can learn more about existing features at https://unchef.app"
+    "description": "Unchef Recipes is my personal Cross Platform App developed with React Native. It started early 2020 with my brother, who is developing the backend of the platform. It is still under development and a it should be available for the public later this year (2024). Unchef is a collection of recipes managed by the Community. You can learn more about existing features at https://www.unchef.app",
+    "website": "https://www.unchef.app"
   },
   {
     "name": "Metria Robots",
     "description": "Metria was an Android App developed for a robotic arm, which was my final year thesis. This Hybrid Ionic App connects to the Robot Arm via Bluetooth and the user can control each joint of the arm with an intuitive user interface. The project was marked with an A and the app is fully compatible with the self-printed arm."
+  },
+  {
+    "name": "HusqPDF",
+    "description": "HusqPDF is an open source, serverside rendered pdf generation toolkit. It provides an engine, ui and design elements to a Nuxt application specifically configured for PDF generation. It allows you to structure, design and build pdf with web standards like HTML, CSS and JavaScript. It also comes with print-optimized Vue components like pages, footers and headers to help developers handle printed media inside a webpage. Checkout the source code on github.com and npm",
+    "github": "https://github.com/husqpdf",
+    "npm": "https://www.npmjs.com/org/husqpdf"
   }
 ]
