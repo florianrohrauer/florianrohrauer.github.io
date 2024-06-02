@@ -5,7 +5,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component: C, pageProps }: AppProps) {
+  const Component = C as any
+
   useEffect(() => {
     AOS.init();
   }, []);
